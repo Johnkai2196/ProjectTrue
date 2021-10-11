@@ -12,7 +12,9 @@ interface ParlamentDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(member: ParlamentMemberData)
 
-    @Query("SElECT * FROM please_work")
+    @Query("SElECT * FROM Please_work")
     fun getData(): LiveData<List<ParlamentMemberData>>
 
+    @Query("SElECT distinct party from Please_work")
+    fun getParty(): LiveData<List<String>>
 }

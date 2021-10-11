@@ -14,12 +14,12 @@ abstract class ParlamentMemberDataBase : RoomDatabase() {
         @Volatile
         private var INSTANCE: ParlamentMemberDataBase? = null
         fun getInstance(context: Context): ParlamentMemberDataBase {
-            synchronized(this) {
-                var instance = INSTANCE
+                val instance = INSTANCE
                 if (instance != null) {
                     return instance
                 }
-                instance = Room.databaseBuilder(
+            synchronized(this) {
+               val instance = Room.databaseBuilder(
                     context.applicationContext,
                     ParlamentMemberDataBase::class.java, "database"
                 ).build()

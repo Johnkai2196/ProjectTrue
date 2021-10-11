@@ -1,5 +1,5 @@
 package com.example.projecttrue.network
-/*
+
 import com.example.projecttrue.database.ParlamentMemberData
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -29,4 +29,3 @@ object ParlamentApi {
 }
 
 
- */
