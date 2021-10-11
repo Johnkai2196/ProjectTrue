@@ -12,9 +12,12 @@ import kotlinx.android.synthetic.main.card_layout.view.party
 import kotlinx.android.synthetic.main.card_layout.view.partyImage
 import kotlinx.android.synthetic.main.card_layout_person.view.*
 import java.util.*
+
 // Name: Johnkai Cortez
 // Student id: 2012960
-//for the url base when getting image
+// 11.10.2021
+
+// for the url base when getting image
 private const val BASE_URL = "https://avoindata.eduskunta.fi/"
 
 // RecyclerView Adapter for setting up the parlamentmemberdata in the list to show.
@@ -22,14 +25,17 @@ class MemberAdapter : RecyclerView.Adapter<MemberAdapter.MyViewHolder>() {
     // for showing the list of parlamentmemberdata
     private var userList = emptyList<ParlamentMemberData>()
 
+    //describes an item view and metadata about its place within the RecyclerView.
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {}
 
+    // create new recyclerView
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.card_layout_person, parent, false)
         )
     }
 
+    //get the size of the list
     override fun getItemCount(): Int {
         return userList.size
     }
@@ -50,6 +56,7 @@ class MemberAdapter : RecyclerView.Adapter<MemberAdapter.MyViewHolder>() {
 
         //click listener for the recyler view to know what you pressed
         holder.itemView.memberLayout.setOnClickListener {
+            //send the info that you pressed to the next fragment
             val action =
                 MemberInfoFragmentDirections.actionMemberInfoFragmentToFullInfoFragment(currentItem)
             holder.itemView.findNavController().navigate(action)

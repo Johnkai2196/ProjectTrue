@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 // Name: Johnkai Cortez
 // Student id: 2012960
+// 1.10.2021
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

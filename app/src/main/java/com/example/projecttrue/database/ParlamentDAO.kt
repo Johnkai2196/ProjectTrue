@@ -5,8 +5,10 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+
 // Name: Johnkai Cortez
 // Student id: 2012960
+// 5.10.2021
 //Dao to retrive and add
 @Dao
 interface ParlamentDAO {

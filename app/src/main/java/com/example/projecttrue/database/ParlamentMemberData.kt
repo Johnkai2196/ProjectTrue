@@ -7,6 +7,7 @@ import kotlinx.android.parcel.Parcelize
 
 // Name: Johnkai Cortez
 // Student id: 2012960
+// 5.10.2021
 
 //Database entities go in this file. These are responsible for reading and writing from the database.
 //ParlamentMemberData represents a parlment entity in the database.

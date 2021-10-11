@@ -6,8 +6,10 @@ import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
+
 // Name: Johnkai Cortez
 // Student id: 2012960
+// 6.10.2021
 private const val BASE_URL = "https://users.metropolia.fi/"
 
 //Build the Moshi object that Retrofit will be using, making sure to add the Kotlin adapter for

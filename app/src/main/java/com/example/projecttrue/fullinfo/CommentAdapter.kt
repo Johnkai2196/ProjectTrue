@@ -10,12 +10,15 @@ import kotlinx.android.synthetic.main.comment_layout.view.*
 
 // Name: Johnkai Cortez
 // Student id: 2012960
+// 11.10.2021
 
 // RecyclerView Adapter for setting up the Comment in the list to show.
 class CommentAdapter : RecyclerView.Adapter<CommentAdapter.MyViewHolder>() {
+
     // for showing the list of comment
     private var commentList = emptyList<CommentData>()
 
+    //describes an item view and metadata about its place within the RecyclerView.
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {}
 
     // create new recyclerView
@@ -24,7 +27,8 @@ class CommentAdapter : RecyclerView.Adapter<CommentAdapter.MyViewHolder>() {
             LayoutInflater.from(parent.context).inflate(R.layout.comment_layout, parent, false)
         )
     }
-    //get count
+
+    //get the size of the list
     override fun getItemCount(): Int {
         return commentList.size
     }
@@ -34,13 +38,14 @@ class CommentAdapter : RecyclerView.Adapter<CommentAdapter.MyViewHolder>() {
     // position.
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = commentList[position]
-        //make variable text to set all info
-        holder.itemView.commentShow.text = currentItem.comment + " Rating: " + currentItem.rating
-        //sets the text to the recyler view text
+        val text=currentItem.comment + " Rating: " + currentItem.rating
+        //set the text
+        holder.itemView.commentShow.text = text
+
 
     }
 
-    //set the data receive to user and that to userlist
+    //set the data receive to comment and that to commentList
     fun setData(comment: List<CommentData>) {
         this.commentList = comment
         notifyDataSetChanged()

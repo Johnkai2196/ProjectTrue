@@ -6,7 +6,8 @@ import com.example.projecttrue.database.ParlamentMemberData
 
 // Name: Johnkai Cortez
 // Student id: 2012960
-class Repository(private val dao: ParlamentDAO) {
+// 5.10.2021
+class Repository(dao: ParlamentDAO) {
     //getting the Parlament data from database
     val getData: LiveData<List<ParlamentMemberData>> = dao.getData()
 

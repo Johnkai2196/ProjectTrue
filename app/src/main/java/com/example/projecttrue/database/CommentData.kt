@@ -4,8 +4,10 @@ import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
+
 // Name: Johnkai Cortez
 // Student id: 2012960
+// 11.10.2021
 
 //Database entities go in this file. These are responsible for reading and writing from the database.
 //CommentData represents a comment entity in the database.
