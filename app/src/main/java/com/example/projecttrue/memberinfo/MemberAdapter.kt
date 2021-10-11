@@ -49,11 +49,10 @@ class MemberAdapter : RecyclerView.Adapter<MemberAdapter.MyViewHolder>() {
 
         //click listener for the recyler view to know what you pressed
         holder.itemView.memberLayout.setOnClickListener {
-            /*
             val action= MemberInfoFragmentDirections.actionMemberInfoFragmentToFullInfoFragment(currentItem)
-            holder.itemView.findNavController().navigate(action)
+           holder.itemView.findNavController().navigate(action)
 
-             */
+
         }
     }
 //set the data receive to user and that to userlist

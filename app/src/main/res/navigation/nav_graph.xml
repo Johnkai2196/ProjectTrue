@@ -23,7 +23,17 @@
             app:argType="string"
             app:nullable="true"
             android:defaultValue="@null" />
-
+        <action
+            android:id="@+id/action_memberInfoFragment_to_fullInfoFragment"
+            app:destination="@id/fullInfoFragment" />
     </fragment>
-
+    <fragment
+        android:id="@+id/fullInfoFragment"
+        android:name="com.example.projecttrue.fullinfo.FullInfoFragment"
+        android:label="fragment_full_info"
+        tools:layout="@layout/fragment_full_info">
+        <argument
+            android:name="info"
+            app:argType="com.example.projecttrue.database.ParlamentMemberData"/>
+    </fragment>
 </navigation>

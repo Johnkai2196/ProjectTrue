@@ -10,21 +10,23 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="87dp"
-            android:src="@drawable/kristillinendemokratia"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="226dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="79dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="49dp"
-            android:text="TextView"
+            android:layout_marginBottom="225dp"
+            android:text="Johnkai Cortez\n23 Years old \nConstituency Espoo \nMember of parliament\ntwitter "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
     </androidx.constraintlayout.widget.ConstraintLayout>

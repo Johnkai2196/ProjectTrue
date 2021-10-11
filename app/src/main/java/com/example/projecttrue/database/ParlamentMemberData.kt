@@ -1,8 +1,12 @@
 package com.example.projecttrue.database
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
+
 //the data class
+@Parcelize
 @Entity(tableName = "Data")
 data class ParlamentMemberData(
     @PrimaryKey
@@ -16,4 +20,4 @@ data class ParlamentMemberData(
     val twitter: String,
     val bornYear: Int,
     val constituency: String
-)
+): Parcelable
