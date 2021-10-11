@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/memberLayout">
-
-
+    android:id="@+id/commentRow">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -19,17 +16,18 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/party"
+                android:id="@+id/commentShow"
                 android:layout_width="0dp"
-                android:layout_height="110dp"
+                android:layout_height="wrap_content"
                 android:gravity="center|left"
-                android:text="test"
-                android:textSize="15sp"
+                android:text="This guy very great rating: 5"
+                android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/right_well"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/partyImage"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/left_well"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/left_well"
@@ -46,16 +44,7 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_end="8dp" />
 
-            <ImageView
-                android:id="@+id/partyImage"
-                android:layout_width="148dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@id/left_well"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/keskusta" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
+
 </layout>

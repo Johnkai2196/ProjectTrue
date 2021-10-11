@@ -1,7 +1,6 @@
 package com.example.projecttrue.party
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,10 +12,12 @@ import com.example.projecttrue.R
 import com.example.projecttrue.databinding.FragmentPartyBinding
 import com.example.projecttrue.viewModels.ViewModels
 
-
+// Name: Johnkai Cortez
+// Student id: 2012960
 class PartyFragment : Fragment() {
     //initialize our binding
     lateinit var binding: FragmentPartyBinding
+
     //initialize our viewmodel
     lateinit var viewModels: ViewModels
     override fun onCreateView(

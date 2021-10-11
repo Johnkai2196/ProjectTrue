@@ -8,7 +8,8 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projecttrue.R
 import kotlinx.android.synthetic.main.card_layout.view.*
-
+// Name: Johnkai Cortez
+// Student id: 2012960
 class Adapter : RecyclerView.Adapter<Adapter.MyViewHolder>() {
     private var userList = emptyList<String>()
 
@@ -56,7 +57,7 @@ class Adapter : RecyclerView.Adapter<Adapter.MyViewHolder>() {
         holder.itemView.rowLayout.setOnClickListener {
             val action = PartyFragmentDirections.actionToNext(currentItem)
             holder.itemView.findNavController().navigate(action)
-            Log.i("MONKEY",currentItem)
+            Log.i("MONKEY", currentItem)
         }
     }
 

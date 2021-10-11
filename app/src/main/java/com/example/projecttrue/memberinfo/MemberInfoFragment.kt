@@ -1,7 +1,6 @@
 package com.example.projecttrue.memberinfo
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,10 +11,10 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.projecttrue.R
 import com.example.projecttrue.databinding.FragmentMemberInfoBinding
-import com.example.projecttrue.party.Adapter
 import com.example.projecttrue.viewModels.ViewModels
 
-
+// Name: Johnkai Cortez
+// Student id: 2012960
 class MemberInfoFragment : Fragment() {
     private val args by navArgs<MemberInfoFragmentArgs>()
     lateinit var viewModels: ViewModels
@@ -26,13 +25,15 @@ class MemberInfoFragment : Fragment() {
     ): View? {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_member_info, container, false)
+
         val adapter = MemberAdapter()
         val recyclerView = binding.textGrid
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
         viewModels = ViewModelProvider(this).get(ViewModels::class.java)
         viewModels.readAllData.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
-            adapter.setData(it.filter { it.party ==args.picked})
+            adapter.setData(it.filter { it.party == args.picked })
         })
         return binding.root
 

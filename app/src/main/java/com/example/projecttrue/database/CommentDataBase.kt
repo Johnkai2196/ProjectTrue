@@ -8,15 +8,15 @@ import androidx.room.RoomDatabase
 // Student id: 2012960
 
 //Make the Database
-@Database(entities = [ParlamentMemberData::class], version = 1, exportSchema = false)
-abstract class ParlamentMemberDataBase : RoomDatabase() {
+@Database(entities = [CommentData::class], version = 1, exportSchema = false)
+abstract class CommentDataBase : RoomDatabase() {
 
-    abstract fun parlamentDAO(): ParlamentDAO
+    abstract fun CommentDAO(): CommentDAO
 
     companion object {
         @Volatile
-        private var INSTANCE: ParlamentMemberDataBase? = null
-        fun getInstance(context: Context): ParlamentMemberDataBase {
+        private var INSTANCE: CommentDataBase? = null
+        fun getInstance(context: Context): CommentDataBase {
             val instance = INSTANCE
             if (instance != null) {
                 return instance
@@ -24,7 +24,7 @@ abstract class ParlamentMemberDataBase : RoomDatabase() {
             synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    ParlamentMemberDataBase::class.java, "database"
+                    CommentDataBase::class.java, "database_Comment"
                 ).build()
                 INSTANCE = instance
                 return instance
@@ -33,5 +33,3 @@ abstract class ParlamentMemberDataBase : RoomDatabase() {
         }
     }
 }
-
-

@@ -12,7 +12,8 @@ import kotlinx.android.synthetic.main.card_layout.view.party
 import kotlinx.android.synthetic.main.card_layout.view.partyImage
 import kotlinx.android.synthetic.main.card_layout_person.view.*
 import java.util.*
-
+// Name: Johnkai Cortez
+// Student id: 2012960
 //for the url base when getting image
 private const val BASE_URL = "https://avoindata.eduskunta.fi/"
 
@@ -37,7 +38,7 @@ class MemberAdapter : RecyclerView.Adapter<MemberAdapter.MyViewHolder>() {
     // update the contents of the {@link ViewHolder#itemView} to reflect the item at the given
     // position.
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-         val currentYear: Int = Calendar.getInstance().get(Calendar.YEAR)
+        val currentYear: Int = Calendar.getInstance().get(Calendar.YEAR)
         val currentItem = userList[position]
         //make variable text to set all info
         val text =
@@ -49,13 +50,15 @@ class MemberAdapter : RecyclerView.Adapter<MemberAdapter.MyViewHolder>() {
 
         //click listener for the recyler view to know what you pressed
         holder.itemView.memberLayout.setOnClickListener {
-            val action= MemberInfoFragmentDirections.actionMemberInfoFragmentToFullInfoFragment(currentItem)
-           holder.itemView.findNavController().navigate(action)
+            val action =
+                MemberInfoFragmentDirections.actionMemberInfoFragmentToFullInfoFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
 
 
         }
     }
-//set the data receive to user and that to userlist
+
+    //set the data receive to user and that to userlist
     fun setData(user: List<ParlamentMemberData>) {
         this.userList = user
         notifyDataSetChanged()
