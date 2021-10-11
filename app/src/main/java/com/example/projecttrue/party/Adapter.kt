@@ -36,7 +36,7 @@ class Adapter : RecyclerView.Adapter<Adapter.MyViewHolder>() {
             "vas" -> "Vasemmisto"
             "ps" -> "Perussuomalaisten"
             "sd" -> "Sosialidemokraatit"
-            "vihr" -> "Viheätdegröna"
+            "vihr" -> "Viheät De Gröna"
             else -> "nothing"
         }
         holder.itemView.party.text = partyFullname

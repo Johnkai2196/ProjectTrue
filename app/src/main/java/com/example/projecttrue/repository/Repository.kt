@@ -9,7 +9,7 @@ class Repository(private val dao: ParlamentDAO) {
 
     val getData: LiveData<List<ParlamentMemberData>> = dao.getData()
     val getParty: LiveData<List<String>> = dao.getParty()
-  suspend fun  addMembers(members:ParlamentMemberData) {
+    suspend fun addMembers(members: ParlamentMemberData) {
         dao.insert(members)
     }
 }

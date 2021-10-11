@@ -1,6 +1,7 @@
 package com.example.projecttrue.memberinfo
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,8 +24,8 @@ class MemberInfoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_member_info, container, false)
 
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_member_info, container, false)
         val adapter = MemberAdapter()
         val recyclerView = binding.textGrid
         recyclerView.adapter = adapter

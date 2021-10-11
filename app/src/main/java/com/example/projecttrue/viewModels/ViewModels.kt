@@ -1,6 +1,7 @@
 package com.example.projecttrue.viewModels
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
@@ -18,17 +19,18 @@ class ViewModels(application: Application) : AndroidViewModel(application) {
     private val repository: Repository
     val userDao = ParlamentMemberDataBase.getInstance(application).parlamentDAO()
 
-    init {
-        viewModelScope.launch {
-            getData()
-            addGroup()
-        }
 
+    init {
         repository = Repository(userDao)
         readAllData = repository.getData
         readParty = repository.getParty
-    }
+        viewModelScope.launch {
+                getData()
+                addGroup()
+            
+        }
 
+    }
 
     fun insert(user: ParlamentMemberData) {
         viewModelScope.launch(Dispatchers.IO) {

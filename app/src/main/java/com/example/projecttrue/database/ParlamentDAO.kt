@@ -6,15 +6,17 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 
-
+//Dao to retrive and add
 @Dao
 interface ParlamentDAO {
+    //insert to the database
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(member: ParlamentMemberData)
 
-    @Query("SElECT * FROM Please_work")
+    //retrives the all parlamentmemberdata from database
+    @Query("SElECT * FROM Data")
     fun getData(): LiveData<List<ParlamentMemberData>>
-
-    @Query("SElECT distinct party from Please_work")
+    //retrives all party from database to be presented
+    @Query("SElECT distinct party from Data")
     fun getParty(): LiveData<List<String>>
 }

@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-
+//Make the Database
 @Database(entities = [ParlamentMemberData::class], version = 1, exportSchema = false)
 abstract class ParlamentMemberDataBase : RoomDatabase() {
 
