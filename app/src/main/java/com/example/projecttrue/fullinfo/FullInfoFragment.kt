@@ -16,7 +16,6 @@ import com.example.projecttrue.database.CommentData
 import com.example.projecttrue.databinding.FragmentFullInfoBinding
 import com.example.projecttrue.viewModels.ViewModels
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.card_layout.view.*
 import java.util.*
 
 // Name: Johnkai Cortez
@@ -89,18 +88,19 @@ class FullInfoFragment : Fragment() {
         })
         return binding.root
     }
-//insert to database the comment
+
+    //insert to database the comment
     private fun insertCommentDatabase() {
-    //set variable person number from the info args
+        //set variable person number from the info args
         val personNumber: Int = args.info.personNumber
-    //set variable comment from the info args
+        //set variable comment from the info args
         val comment = binding.editText.text.toString()
-    //set variable person number  from the info args
+        //set variable person number  from the info args
         val rate = when (binding.editTextNumber.text.toString()) {
-            "" -> -9
+            "" -> 0
             else -> Integer.parseInt(binding.editTextNumber.text.toString())
         }
-
+//if the input is wrong it will not add
         if (inputCheck(comment, rate)) {
             // Create Comment Object
             val comment = CommentData(
@@ -113,14 +113,15 @@ class FullInfoFragment : Fragment() {
             viewModels.addComment(comment)
 
         } else {
+            //say to the person to fill right
             Toast.makeText(requireContext(), "Please fill out all fields.", Toast.LENGTH_LONG)
                 .show()
         }
     }
 
     private fun inputCheck(comment: String, rate: Int): Boolean {
-
-        return !(TextUtils.isEmpty(comment) && rate==5)
+//return not if the requirement fulfil
+        return !(TextUtils.isEmpty(comment) && rate < 5 || rate > 5 || TextUtils.isEmpty(comment) || rate < 0 || rate == 0)
     }
 
 }

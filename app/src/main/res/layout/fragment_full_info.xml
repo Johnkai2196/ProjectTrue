@@ -70,7 +70,7 @@
             android:layout_marginTop="22dp"
             android:layout_marginEnd="4dp"
             android:ems="10"
-            android:hint="Rate from 1-5"
+            android:hint="Rate 1-5"
             android:inputType="number"
             app:layout_constraintEnd_toStartOf="@+id/comment"
             app:layout_constraintStart_toStartOf="parent"

@@ -1,6 +1,5 @@
 package com.example.projecttrue.party
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,6 +28,7 @@ class Adapter : RecyclerView.Adapter<Adapter.MyViewHolder>() {
     override fun getItemCount(): Int {
         return userList.size
     }
+
     // Called by RecyclerView to display the data at the specified position. This method should
     // update the contents of the {@link ViewHolder#itemView} to reflect the item at the given
     // position.
@@ -71,6 +71,7 @@ class Adapter : RecyclerView.Adapter<Adapter.MyViewHolder>() {
             holder.itemView.findNavController().navigate(action)
         }
     }
+
     //set the data receive to user and that to  String list
     fun setData(user: List<String>) {
         this.userList = user

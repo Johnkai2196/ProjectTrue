@@ -60,8 +60,6 @@ class MemberAdapter : RecyclerView.Adapter<MemberAdapter.MyViewHolder>() {
             val action =
                 MemberInfoFragmentDirections.actionMemberInfoFragmentToFullInfoFragment(currentItem)
             holder.itemView.findNavController().navigate(action)
-
-
         }
     }
 

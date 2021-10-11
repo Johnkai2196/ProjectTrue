@@ -38,7 +38,7 @@ class CommentAdapter : RecyclerView.Adapter<CommentAdapter.MyViewHolder>() {
     // position.
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = commentList[position]
-        val text=currentItem.comment + " Rating: " + currentItem.rating
+        val text = currentItem.comment + "\nRating: " + currentItem.rating
         //set the text
         holder.itemView.commentShow.text = text
 

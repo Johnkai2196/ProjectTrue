@@ -13,7 +13,7 @@
         <entry key="..\:/Software/ProjectTrue/app/src/main/res/layout/card_layout.xml" value="0.1" />
         <entry key="..\:/Software/ProjectTrue/app/src/main/res/layout/card_layout_person.xml" value="0.1" />
         <entry key="..\:/Software/ProjectTrue/app/src/main/res/layout/comment_layout.xml" value="0.5" />
-        <entry key="..\:/Software/ProjectTrue/app/src/main/res/layout/fragment_full_info.xml" value="0.22" />
+        <entry key="..\:/Software/ProjectTrue/app/src/main/res/layout/fragment_full_info.xml" value="0.48289269051321926" />
         <entry key="..\:/Software/ProjectTrue/app/src/main/res/layout/fragment_member_info.xml" value="0.1870967741935484" />
         <entry key="..\:/Software/ProjectTrue/app/src/main/res/layout/fragment_party.xml" value="0.1" />
         <entry key="..\:/Software/ProjectTrue/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
@@ -25,12 +25,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.22" />
-      </ProjectState>
-    </option>
   </component>
 </project>
